@@ -59,7 +59,7 @@ C'est un défaut notable totallement en dehors du principe de sécurisation du r
 
 __Sécurisation de la clé privée__
 
-![Ouroboros](@attachment/Clipboard_2020-05-01-18-42-38.png)
+![Ouroboros](./attachments/Clipboard_2020-05-01-18-42-38.png)
 
 La sécurité du crédit accumulé sur un compte repose sur la clé privé que seul l'ayant droit a en sa possesion. Il parait donc très important de prendre toutes les précautions nécessaires pour la sauvegarde de sa clé afin de prévenir toute perte. Il reste risqué d'en multiplier les sauvegardes car cela augmente les possibilités d'interception de la clé privé par un autre utilisateur.
 
@@ -71,17 +71,17 @@ __Masse monétaire dormante__
 
 Les cas de James Howells et de Campbell Simpson sont des erreurs utilisateurs sur un réseau naissant. Beaucoup d'autres cas comme ceux-ci sont à relevés et continuent à arriver à différentes échelles. Aussi, il est possible qu'un utilisateur perde ou détruise volontairement la clé privé de son portefeuille, même si ce problème semble incomber au seul détenteur il reste un problème : tous les bitcoin envoyés à cette adresse seraient alors de fait bloqués, créant alors de véritables adresses poubelles à cash. Si ces erreurs ont éxistés, on peut considérer naturellement que d'autres suiviendront et que la somme de bitcoin perdues ne fait qu'augmenter.
 
-![Serge Gainsbourg brulle un billet](@attachment/Clipboard_2020-05-01-18-58-49.png)
+![Serge Gainsbourg brulle un billet](./attachments/Clipboard_2020-05-01-18-58-49.png)
 
 Sans une "copie" de la clé, les bitcoins "existent" sur le réseau, mais sont de fait définitivement verrouillés car ils ne sont plus échangeables. Le problème étant c'est que cette masse dormante est définitivement perdue tant que la clé privé n'est pas retrouvé. Le nombre de bitcoin étant prévu fixe, il y a un donc un écart entre la masse monétaire existante et celle en pratique accessible, sur le cas unique de James Howells c'est une différence de 0,03%.
 
-Nous pouvons avoir un premier indicateur du nombres de bitcoin dormants en explorant la blockchain et en déterminant plusieurs paramètres. Le site [Bitinfocharts](https://bitinfocharts.com/top-100-dormant_8y-bitcoin-addresses.html) ou encore ce [Spreadsheets](https://docs.google.com/spreadsheets/d/1xTROekDerP1TPOB3SOD_1bbQr580BPqbhF3YHdO96pw/edit?usp=sharing) ([.xlsx au 4 mai 2020](@attachment/Dormant Bitcoin Addresses with a balance of 25btc or more.xlsx)) qualifient ces potentielles adresses vérouillés. Pour faire l'hypothèse d'une somme dormante il faut regarder plusieurs choses :
+Nous pouvons avoir un premier indicateur du nombres de bitcoin dormants en explorant la blockchain et en déterminant plusieurs paramètres. Le site [Bitinfocharts](https://bitinfocharts.com/top-100-dormant_8y-bitcoin-addresses.html) ou encore ce [Spreadsheets](https://docs.google.com/spreadsheets/d/1xTROekDerP1TPOB3SOD_1bbQr580BPqbhF3YHdO96pw/edit?usp=sharing) ([.xlsx au 4 mai 2020](./attachments/Dormant Bitcoin Addresses with a balance of 25btc or more.xlsx)) qualifient ces potentielles adresses vérouillés. Pour faire l'hypothèse d'une somme dormante il faut regarder plusieurs choses :
 - La date de première utilisation de l'adresse
 - La date de la dernière transaction émise sur l'adresse
 - La date de la dernière transaction reçue sur l'adresse
 - La somme de bitcoin qu'elle contient à date
 
-![Somme des bitcoins 'dormants' sur 8 ans du 1 main 2012 au 1er mai 2020](@attachment/Clipboard_2020-05-04-13-35-59.png)
+![Somme des bitcoins 'dormants' sur 8 ans du 1 main 2012 au 1er mai 2020](./attachments/Clipboard_2020-05-04-13-35-59.png)
 
 Si l'on utilise la classification de BitInfoCharts, la masse dormante en mai 2020 pour 8 ans d'inactivité et + serait de 2,46 millions de BTC. A cette même date le nombre de [bitcoin en circulation](https://www.blockchain.com/charts/total-bitcoins) est de 18,36 millions. En effectuant un pourcentage $(100*2,46)/18,36=13,40$ il y aurait 13,40 % de bitcoins 'dormants' du nombre totale de bitcoin en circulation. Si l'on augmente la date de dernière activité (en émission ou réception) cette part tant a augmenter. Par exemple, si on l'augmente ljusqu'à il y a 1 an, alors le nombre de bitcoins considérés dormants est de 17,51 millions, soit 95,37 % de la masse circulante. Cette __indicateur est totallement imparfait__ car il ne prend pas en compte le __temps de détention__ qui est inconnu. Ce que calcul l'indicateur ce sont les liquidités qui ne sont pas utilisés et qui ne le seront peut-être jamais si l'on reprend le cas de la perte de la clé privée. Mais rien n'indique vraiment que ces bitcoins ne sont pas simplement du pure _holding_. Ce dernier point est important pour modérer l'interprétention que l'on peut en faire. Cela permet seulement de faire une première estimation de bitcoins potentiellement innaccessibles ou inutilisés mais ne représente en aucun cas le nombre réel de bitcoin innaccessibles car c'est indéterminable. Le Spreadsheet contient un _score zombie_ qui classifie en ce sens et reprend, par image, l'idée que l'adresse peut être morte et/ou vivante.
 
